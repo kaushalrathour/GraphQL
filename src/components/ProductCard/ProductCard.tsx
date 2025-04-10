@@ -6,7 +6,7 @@ import { StackNavigatorProps } from "@react-navigation/stack";
 import { StackParamList } from "../../types/StackParamList";
 
 export default function ProductCard ({product}: any) {
-    // console.log("Inside Product Card", product.node);
+    // console.log("Inside Product Card", product.node.handle);
     const navigation = useNavigation<StackNavigatorProps<StackParamList>>();
     return(
         <TouchableOpacity style={styles.container} onPress={()=>{

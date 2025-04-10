@@ -25,7 +25,7 @@ export default function ProductDetailScreen ({navigation, route}: Props) {
     return(
         <View style={styles.container}>
             <ScrollView>
-            {!loading &&
+            {!loading && data &&
             <View style={styles.imageContainer}>
             <Swiper autoplay showsButtons={false}>
             {data.productByHandle.images.edges.map((image: any, index: any)=>(
@@ -57,11 +57,6 @@ export default function ProductDetailScreen ({navigation, route}: Props) {
             }
             </View>
             </View>
-            }
-            {!allProductLoading  && products &&  
-                <View style={styles.relatedProducts}>
-                <ProductCardList data={products.products.edges.slice(1, 7)} title={"Related Products: "} horizontal={true}/>
-                </View>
             }
             </ScrollView>
         </View>
